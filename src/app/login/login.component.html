@@ -1,0 +1,25 @@
+<ion-content padding>
+  <ion-text class="titleTxt">
+    <h1><ion-icon name="videocam"></ion-icon><br> City Movies</h1>
+  </ion-text>
+  <ion-item >
+    <ion-label position="floating" class="inputtxt">Username</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>   
+  <ion-item>
+    <ion-label position="floating" class="inputtxt">Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>   
+  
+  <ion-button expand="block" class="loginBtn" mat-flat-button (click)="onLogin()">Login</ion-button>
+  <ion-grid>
+    <ion-row class="userTxt">
+      <ion-col>
+        <a routerLink="/forgot-pwd">Forgot Password</a>
+      </ion-col>
+      <ion-col>
+        <a routerLink="/signup">Not a existing user? Register</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+</ion-content>

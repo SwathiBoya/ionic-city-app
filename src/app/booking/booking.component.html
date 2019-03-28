@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        City Movies
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-button  class="loginBtn" routerLink="/movie-list" float-right>Back</ion-button>
+      <ion-button  class="loginBtn" routerLink="/offers" float-right>Offers</ion-button>
+      <ion-card class="pay">
+          <ion-card-header>
+            <ion-card-title>Name:</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Total amount: 300
+          </ion-card-content>
+        </ion-card>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Select Payment Method</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Debit Card</ion-label>
+              <ion-radio slot="start" value="debit" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Credit Card</ion-label>
+              <ion-radio slot="start" value="credit"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Net Banking</ion-label>
+              <ion-radio slot="start" value="netbanking"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Phone Pay</ion-label>
+              <ion-radio slot="start" value="phonepay"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Paytm</ion-label>
+              <ion-radio slot="start" value="paytm"></ion-radio>
+            </ion-item>
+            
+          </ion-radio-group>
+        </ion-list>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Select Bank</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>SBI</ion-label>
+              <ion-radio slot="start" value="sbi" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>HDFC</ion-label>
+              <ion-radio slot="start" value="hdfc"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>AXIS</ion-label>
+              <ion-radio slot="start" value="axis"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>ANdhra Bank</ion-label>
+                <ion-radio slot="start" value="andhra"></ion-radio>
+              </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        <ion-button  class="payBtn" routerLink="/transaction">Proceed to Pay</ion-button>
+  </ion-content>

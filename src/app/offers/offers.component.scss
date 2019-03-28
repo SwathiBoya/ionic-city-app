@@ -1,0 +1,22 @@
+ion-toolbar{
+    --background: linear-gradient(to right top, #e51180, #e31282, #e21283, #e01385, #de1486);
+    color: #fff;
+}
+.titleTxt{
+    text-align: center;
+    color: #000;
+ }
+ .titleTxt h1{
+    margin-top: 120px;
+    font-size: 26px;
+    margin: 247px 10px 10px 10px
+ }
+
+.loginBtn{
+    margin: 10px 0px 0px 145px;
+    --background: linear-gradient(to right top, #e51180, #e31282, #e21283, #e01385, #de1486);
+}
+ion-icon{
+    font-size: 65px;
+    color: #19bb18;
+}

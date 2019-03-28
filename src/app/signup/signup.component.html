@@ -1,0 +1,61 @@
+<ion-content padding>
+  <ion-text class="titleTxt">
+    <h1><ion-icon name="videocam"></ion-icon><br>City Movies</h1>
+  </ion-text>
+  <!-- <ion-item >
+    <ion-label position="floating" class="inputtxt" name="name" [(ngModel)]="customer.name">Username</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>   
+  <ion-item>
+    <ion-label position="floating" class="inputtxt" name="password" [(ngModel)]="customer.password" >Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>   
+  <ion-item>
+    <ion-label position="floating" class="inputtxt">Confirm Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item> -->
+  <!-- <ion-item>
+      <ion-label position="floating" class="inputtxt" name="email" [(ngModel)]="customer.email" >E-Mail Id</ion-label>
+      <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label position="floating" class="inputtxt" name="phone" [(ngModel)]="customer.phone" >Phone</ion-label>
+    <ion-input type="text"></ion-input>
+</ion-item> -->
+<!--  <ion-item>
+      <ion-label position="floating" class="inputtxt">Date of Birth</ion-label>
+      <ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"></ion-datetime>
+  </ion-item> -->
+  
+  <ion-item>
+      <ion-label position="floating" >Name
+      </ion-label>
+      <ion-input  name="name" [(ngModel)]="customer.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input  name="email" [(ngModel)]="customer.email" ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input  name="password" type="password" [(ngModel)]="customer.password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input  name="confirm_password" type="password" [(ngModel)]="customer.confirm_password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input  name="phone" [(ngModel)]="customer.phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input  name="address" [(ngModel)]="customer.address"></ion-input>
+      </ion-item>
+  <ion-button expand="block" class="loginBtn"  (click)="onRegister(customer)">Register</ion-button>
+</ion-content>

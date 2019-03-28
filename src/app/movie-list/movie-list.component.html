@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        City Movies
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+
+    <ion-card *ngFor='let m of list'>
+    <ion-row>
+        <ion-col size="4">
+            <img src="{{ m.image_url }}">
+            <br>
+            <ion-button expand="block" class="loginBtn" (click)='onBook()' >Book Now</ion-button>
+        </ion-col>
+        <ion-col size="8">
+              <ion-card-content>
+                  Movie Name:{{ m.name }}
+                  Year: {{ m.year }}<br>
+                  Production House: {{ m.production_house }}<br>
+                  Rating: {{ m.rating}} <br>
+                  Movie Type{{ m.type }} <br> 
+                  Language: {{ m.language }} <br> 
+                  Release Date{{ m.date }}
+              </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-content>
+  

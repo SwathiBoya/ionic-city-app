@@ -2,6 +2,7 @@ ion-toolbar{
     --background: linear-gradient(to right top, #e51180, #e31282, #e21283, #e01385, #de1486);
     color: #fff;
 }
-ion-content{
-    // --background: linear-gradient(to right top, #11e564, #10e35c, #10e253, #12e04a, #14de40);
+.loginBtn{
+    margin-top: 5px;
+    --background: linear-gradient(to right top, #e51180, #e31282, #e21283, #e01385, #de1486);
 }
