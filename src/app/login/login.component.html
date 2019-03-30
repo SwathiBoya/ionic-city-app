@@ -4,14 +4,14 @@
   </ion-text>
   <ion-item >
     <ion-label position="floating" class="inputtxt">Username</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text"  [(ngModel)]="customer.email"></ion-input>
   </ion-item>   
   <ion-item>
-    <ion-label position="floating" class="inputtxt">Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-label position="floating" class="inputtxt" >Password</ion-label>
+    <ion-input type="password" [(ngModel)]="customer.password"></ion-input>
   </ion-item>   
   
-  <ion-button expand="block" class="loginBtn" mat-flat-button (click)="onLogin()">Login</ion-button>
+  <ion-button expand="block" class="loginBtn" mat-flat-button (click)="onLogin(customer)">Login</ion-button>
   <ion-grid>
     <ion-row class="userTxt">
       <ion-col>
