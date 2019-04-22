@@ -7,9 +7,17 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MovieService {
-  private movieUrl = 'http://192.168.0.98:3000/api/movies';
+  private moviesUrl = 'http://localhost:3000/api/movies';
+  private bookingUrl= 'http://localhost:3000/api/booking';
   constructor(private http: HttpClient) { }
   getRemoteMovies(): Observable<[]>{
-  	return this.http.get<[]>(this.movieUrl); 		
+  	return this.http.get<[]>(this.moviesUrl); 		
+  }
+  getMovieById(id):Observable<any>{
+    return this.http.get<[]>(this.moviesUrl+ "/"+id);
+  }
+  addBooking(booking):Observable<any>{
+    console.log(">> addBooking:" +JSON.stringify(booking));
+    return this.http.post(this.bookingUrl,booking);
   }
 }

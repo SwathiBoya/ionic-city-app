@@ -34,7 +34,7 @@ const routes: Routes = [
       component:MovieListComponent
     },
     {
-      path:'booking',
+      path:'booking/:id',
       component:BookingComponent
     },
     {

@@ -4,10 +4,10 @@ ion-button {
 .loginBtn{
     margin-top: 25px;
     width: 100%;
-    --background: linear-gradient(to right top, #e51180, #e31282, #e21283, #e01385, #de1486);
+    --background: #fa8231;
 }
 ion-content{
-    --background: linear-gradient(to right top, #11e564, #10e35c, #10e253, #12e04a, #14de40);
+    --background: #fff url('../../assets/login5.png') no-repeat center center / cover;
    
 // --ion-background-color:#111D12;
 }
@@ -16,14 +16,14 @@ ion-item{
    color: #000;
 }
 .inputtxt{
-    color: #fff;
+    color: #000;
 }
 .userTxt ion-col a{
-    color: #fff;
+    color: #000;
 }
 .titleTxt{
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: bold;
 }
 .titleTxt h1 {
@@ -32,4 +32,5 @@ ion-item{
 }
 ion-icon{
     font-size: 65px;
+    color: #fa8231
 }

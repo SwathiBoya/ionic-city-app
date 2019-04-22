@@ -15,7 +15,10 @@ export class MovieListComponent implements OnInit {
   ngOnInit() {
     this.movieService.getRemoteMovies().subscribe((result) => {this.list = result;});
   }
-  onBook(){
-    this.router.navigate(['/booking']);
+  onBook(m){
+    this.router.navigate(['/booking/' +m.id]);
+  }
+  onOffers(){
+    this.router.navigate(['/offers']);
   }
 }
