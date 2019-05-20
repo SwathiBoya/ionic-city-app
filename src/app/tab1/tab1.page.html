@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+      <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="60000"
+      pager="true">
+      <ion-slide *ngFor="let banners of slideData">
+      <img src={{banners.image}}>
+      </ion-slide>
+      </ion-slides>
+  </ion-slides>
+  <ion-card *ngFor='let m of list'>
+    <ion-row>
+      <ion-col size="3">
+        <img src="{{ m.image_url }}" class="mvImg">
+      </ion-col>
+      <ion-col size="6">
+        <ion-card-content>
+          Movie Name: {{ m.name }}
+          Movie Type: {{ m.type }} <br>
+          Language: {{ m.language }} <br>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon><br>
+        </ion-card-content>
+      </ion-col>
+      <ion-col size="3">
+          <ion-button class="loginBtn" (click)='onBook(m)'>Book Now</ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

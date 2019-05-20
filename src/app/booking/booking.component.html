@@ -1,22 +1,38 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-icon name="arrow-back" slot ="start" routerLink="/movie-list" style="font-size: 25px;"></ion-icon>
-      <ion-title>
-        City Movies
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-        <ion-card>
-            <ion-img class="book" src="{{movie.image_url}}" ></ion-img><br>
-            <ion-item>
-                <ion-label position="floating">{{movie.name}}</ion-label>
-                <ion-input readonly></ion-input>
-            </ion-item><br>
-            <ion-item>
-                <ion-label position="floating">No. Of Tickets</ion-label>
-                <ion-input name="tickets" [(ngModel)]="data.tickets"></ion-input>
-            </ion-item><br>
-            <ion-button color="success" routerLink="/transaction" (click)="addBooking(movie,data.tickets)">Book Ticket</ion-button>
-          </ion-card>
-  </ion-content>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" routerLink="/tabs" style="font-size: 25px;"></ion-icon>
+    <ion-title>
+      City Movies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <img src="{{ movie.image_url }}" class="mvImg">
+    <ion-item>
+      <ion-label position="floating">{{movie.name}}</ion-label>
+    </ion-item><br>
+    <ion-item>
+      <ion-label position="floating">No. Of Tickets</ion-label>
+      <ion-input name="tickets" [(ngModel)]="my_tickets"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+    </ion-item><br>
+    <ion-list>
+        <ion-list-header>Theater</ion-list-header>      
+        <ion-item>
+          <ion-label>Select Theater</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="inox">Inox</ion-select-option>
+            <ion-select-option value="venkatesh">Venkatesh</ion-select-option>
+            <ion-select-option value="anand">Anand Complex</ion-select-option>
+            <ion-select-option value="raj">Raj</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+      </ion-list>
+    <ion-button class="loginBtn" routerLink="/payment" (click)="addBooking(movie,data.tickets)">Book Ticket</ion-button>
+  </ion-card>
+</ion-content>

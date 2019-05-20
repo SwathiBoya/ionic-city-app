@@ -23,5 +23,10 @@ export class CustomerService {
   addRemoteCustomer(customer):Observable<any>{
   	return this.http.post(this.customerUrl,customer);
  }
+
+ getRemoteCustomerPassword(phone):Observable<any>{
+  return this.http.get<[]>(this.customerUrl+'/'+phone);     
+
+}
   
 }

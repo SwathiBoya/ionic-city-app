@@ -24,18 +24,24 @@ export class LoginComponent implements OnInit {
   email ="";
   password = "";
   ngOnInit() {
-    this.customerService.getRemoteCustomers().subscribe((result) =>(this.customers =result));
+    this.customerService.getRemoteCustomers().subscribe((result) => (this.customers = result));
   }
-  onLogin(customer){
-      if((customer.email)&&(customer.password)){
-        console.log("Sucess");
-        this.router.navigate(['/movie-list']);
+  onLogin(customer) {
+    for (var i = 0; i < this.customers.length; i++) {
+      if ((customer.email == this.customers[i].email) && (customer.password == this.customers[i].password)) {
+        console.log(customer);
+        this.router.navigate(['/tabs/tab1']);
+        if (localStorage.getItem('user') == null) {
+          localStorage.setItem('user', JSON.stringify(customer));
+        }
       }
-      else{
-        this.loginAlert();
-        this.email = "email";
-        this.password ="password";
+      else {
+        console.log('failed to login');
+        // this.loginAlert();
+        // this.email='email';
+        // this.password='password';
       }
+    }
   }
 
   async loginAlert() {
@@ -49,3 +55,4 @@ export class LoginComponent implements OnInit {
     await alert.present();
   }
 }
+

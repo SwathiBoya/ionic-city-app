@@ -11,13 +11,18 @@ declare var RazorpayCheckout:any;
 })
 export class BookingComponent implements OnInit {
   constructor(private router:Router,private route:ActivatedRoute,private movieService:MovieService) { }
-  movie:[];
+  movie:any=[];
   private sub:any;
+  my_tickets='';
   id:number;
   data={
     tickets:0
   }
   ngOnInit() {
+    this.movie={
+      name:'',
+      image_url:''
+    }
     this.sub = this.route.params.subscribe(params => {
     this.id = +params['id']; // (+) converts string 'id' to a number
        console.log("id is "+this.id);
@@ -49,13 +54,14 @@ export class BookingComponent implements OnInit {
     // this.router.navigate(['/payment'])
     // });  
 
+    var amountperticket:any=this.my_tickets;
     var options = {
       description: 'Credits towards consultation',
       image: 'https://i.imgur.com/3g7nmJC.png',
       currency: 'INR',
       key: 'rzp_test_gEEko61scsbxmP',
       // order_id: 'order_7HtFNLS98dSj8x',
-      amount: '5000',
+      amount: (( amountperticket )*(12000)),
       name: 'foo',
       prefill: {
         email: 'pranav@razorpay.com',
@@ -68,9 +74,10 @@ export class BookingComponent implements OnInit {
     }
     
     var successCallback = function(success) {
-      alert('payment_id: ' + success.razorpay_payment_id)
-      var orderId = success.razorpay_order_id
-      var signature = success.razorpay_signature
+      alert('payment_id: ' + success.razorpay_payment_id);
+      var orderId = success.razorpay_order_id;
+      var signature = success.razorpay_signature;
+      this.router.navigate(['/booking']);
     }
     
     var cancelCallback = function(error) {

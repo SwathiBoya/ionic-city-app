@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-icon name="arrow-back" slot ="start" routerLink="/tabs/tab3" style="font-size: 25px;"></ion-icon>
+    <ion-title>
+      Booking History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor='let book of booking'>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card-content>
+          Movie Name: {{ book.movie_name }}<br>
+          City: {{ book.city }}<br>
+          Date: {{ book.movie_date }}<br>
+          Theatre: {{ book.theatre }}<br>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

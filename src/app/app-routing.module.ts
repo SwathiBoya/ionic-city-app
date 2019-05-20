@@ -4,12 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { OffersComponent } from './offers/offers.component';
-
+import { BookinghistoryComponent } from './bookinghistory/bookinghistory.component';
 
 const routes: Routes = [
     {
@@ -30,10 +29,6 @@ const routes: Routes = [
       pathMatch: 'full' 
     },
     {
-      path:'movie-list',
-      component:MovieListComponent
-    },
-    {
       path:'booking/:id',
       component:BookingComponent
     },
@@ -52,6 +47,14 @@ const routes: Routes = [
     { 
       path: 'home', 
       loadChildren: './home/home.module#HomePageModule' 
+    },
+    { 
+      path: 'bookinghistory', 
+      component:BookinghistoryComponent
+    },
+    { 
+      path: '', 
+      loadChildren: './tabs/tabs.module#TabsPageModule' 
     }
 ];
 

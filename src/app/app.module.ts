@@ -11,16 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { FormsModule } from "@angular/forms";
 import { OffersComponent } from './offers/offers.component';
+import { BookinghistoryComponent } from './bookinghistory/bookinghistory.component';
 
 @NgModule({
-  declarations: [AppComponent,LoginComponent,SignupComponent,ForgotPwdComponent,MovieListComponent,BookingComponent,PaymentComponent,TransactionComponent,OffersComponent],
+  declarations: [AppComponent,LoginComponent,SignupComponent,ForgotPwdComponent,BookingComponent,PaymentComponent,TransactionComponent,OffersComponent,BookinghistoryComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, FormsModule],
   providers: [
